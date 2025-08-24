@@ -199,7 +199,8 @@ class ExposedRoutesExtractor implements ExposedRoutesExtractorInterface
             $patterns[] = '(' . $toExpose . ')';
         }
 
-        return implode($patterns, '|');
+        // 7x : eZ Platform Related Patch : 2025.08
+        return implode( '|', $patterns );
     }
 
     /**
